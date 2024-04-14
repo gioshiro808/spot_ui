@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:id="@+id/scroll_section"
+        android:background="@android:color/transparent"
+        android:nestedScrollingEnabled="true"
+        app:layout_scrollEffect="compress"
+        app:layout_behavior="@string/bottom_sheet_behavior"
+        android:scrollbars="none"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="500dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_layer2">
+
+                <ImageView
+                    android:id="@+id/ico_sup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="17dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txt_logo"
+                    app:srcCompat="@drawable/supico" />
+
+                <TextView
+                    android:id="@+id/txt_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="10dp"
+                    android:text="SPOT"
+                    android:textColor="@color/orange"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txt_greeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Selamat datang di SPOT,"
+                    android:textColor="#919191"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_logo" />
+
+                <TextView
+                    android:id="@+id/txt_hashtag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:text="#StrongerTogether"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_greeting" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginHorizontal="17dp"
+                    android:layout_marginTop="17dp"
+                    android:backgroundTint="@color/cardview_dark_background"
+                    app:cardCornerRadius="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_hashtag">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/txt_ihsg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:text="IHSG"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txt_sub_ihsg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="Index Harga Saham Gabungan"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_ihsg" />
+
+                        <TextView
+                            android:id="@+id/txt_values1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="888,888.88"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="@+id/txt_ihsg"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/txt_ihsg" />
+
+                        <TextView
+                            android:id="@+id/txt_values2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:text="88.88%"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/txt_values1" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/txt_wrldindi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="start"
+                    android:text="World Indices"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+                <TextView
+                    android:id="@+id/txt_see"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="17dp"
+                    android:text="Lihat Semua"
+                    android:textColor="#00BCD4"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_wrldindi"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txt_wrldindi" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_wrldindi"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/cardview_dark_background">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:id="@+id/txt_djia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="DJIA"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/txt_subdjia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="Dow Jones Industrial Average"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:textStyle="normal"
+                            app:layout_constraintTop_toBottomOf="@id/txt_djia"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/txt_djiavalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888,888.88"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_djia"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_djia"/>
+
+                        <TextView
+                            android:id="@+id/txt_djiavalue2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888.88(88%)"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_subdjia"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_subdjia"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_content2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/crd_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/cardview_dark_background">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:id="@+id/txt_hsi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="HSI"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/txt_subhsi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="Hangseng Index"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:textStyle="normal"
+                            app:layout_constraintTop_toBottomOf="@id/txt_hsi"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/txt_hsivalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888,888.88"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_hsi"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_hsi"/>
+
+                        <TextView
+                            android:id="@+id/txt_hsivalue2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888.88(88%)"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_subhsi"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_subhsi"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_content3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/crd_content2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/cardview_dark_background">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:id="@+id/txt_hsi3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="HSI"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/txt_subhsi3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="Hangseng Index"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:textStyle="normal"
+                            app:layout_constraintTop_toBottomOf="@id/txt_hsi3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/txt_hsi3value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888,888.88"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_hsi3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_hsi3"/>
+
+                        <TextView
+                            android:id="@+id/txt_hsi3value2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888.88(88%)"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_subhsi3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_subhsi3"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_content4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/crd_content3"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/cardview_dark_background">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:id="@+id/txt_hsi4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="HSI"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/txt_subhsi4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="Hangseng Index"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:textStyle="normal"
+                            app:layout_constraintTop_toBottomOf="@id/txt_hsi4"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/txt_hsi4value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888,888.88"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_hsi4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_hsi4"/>
+
+                        <TextView
+                            android:id="@+id/txt_hsi4value2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888.88(88%)"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_subhsi4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_subhsi4"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_content5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/crd_content4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/cardview_dark_background">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="5dp">
+
+                        <TextView
+                            android:id="@+id/txt_hsi5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="HSI"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/txt_subhsi5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="17dp"
+                            android:text="Hangseng Index"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:textStyle="normal"
+                            app:layout_constraintTop_toBottomOf="@id/txt_hsi5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/txt_hsi5value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888,888.88"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_hsi5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_hsi5"/>
+
+                        <TextView
+                            android:id="@+id/txt_hsi5value2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888.88(88%)"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_subhsi5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_subhsi5"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/txt_com"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="start"
+                    android:text="Commodities"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/crd_content5" />
+
+                <TextView
+                    android:id="@+id/txt_see2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="17dp"
+                    android:text="Lihat Semua"
+                    android:textColor="#00BCD4"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/txt_com"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/txt_com" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_content_layer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_com"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="15dp"
+                    android:backgroundTint="@color/cardview_dark_background">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="5dp">
+
+                        <ImageView
+                            android:id="@+id/igico"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginLeft="17dp"
+                            app:srcCompat="@drawable/igico" />
+
+                        <TextView
+                            android:id="@+id/txt_lcony"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="LCONY"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/igico"/>
+
+                        <TextView
+                            android:id="@+id/txt_sublcony"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="L. Crude Oil NYM"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:textStyle="normal"
+                            app:layout_constraintTop_toBottomOf="@id/txt_lcony"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/igico"/>
+
+                        <TextView
+                            android:id="@+id/txt_lconyvalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888,888.88"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_lcony"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_lcony"/>
+
+                        <TextView
+                            android:id="@+id/txt_lconyvalue2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888.88(88%)"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_sublcony"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_sublcony"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_content2_layer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/crd_content_layer2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/cardview_dark_background">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="5dp">
+
+                        <ImageView
+                            android:id="@+id/igico2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginLeft="17dp"
+                            app:srcCompat="@drawable/igico" />
+
+                        <TextView
+                            android:id="@+id/txt_lcony2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="LCONY"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/igico2"/>
+
+                        <TextView
+                            android:id="@+id/txt_sublcony2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="L. Crude Oil NYM"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:textStyle="normal"
+                            app:layout_constraintTop_toBottomOf="@id/txt_lcony2"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/igico2"/>
+
+                        <TextView
+                            android:id="@+id/txt_lcony2value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888,888.88"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_lcony2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_lcony2"/>
+
+                        <TextView
+                            android:id="@+id/txt_lcony2value2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888.88(88%)"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_sublcony2"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_sublcony2"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_content3_layer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/crd_content2_layer2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/cardview_dark_background">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="5dp">
+
+                        <ImageView
+                            android:id="@+id/igico3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginLeft="17dp"
+                            app:srcCompat="@drawable/igico" />
+
+                        <TextView
+                            android:id="@+id/txt_lcony3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="LCONY"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/igico3"/>
+
+                        <TextView
+                            android:id="@+id/txt_sublcony3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="L. Crude Oil NYM"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:textStyle="normal"
+                            app:layout_constraintTop_toBottomOf="@id/txt_lcony3"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/igico3"/>
+
+                        <TextView
+                            android:id="@+id/txt_lcony3value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888,888.88"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_lcony3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_lcony3"/>
+
+                        <TextView
+                            android:id="@+id/txt_lcony3value2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888.88(88%)"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_sublcony3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_sublcony3"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_content4_layer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/crd_content3_layer2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/cardview_dark_background">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="5dp">
+
+                        <ImageView
+                            android:id="@+id/igico4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginLeft="17dp"
+                            app:srcCompat="@drawable/igico" />
+
+                        <TextView
+                            android:id="@+id/txt_lcony4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="LCONY"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/igico4"/>
+
+                        <TextView
+                            android:id="@+id/txt_sublcony4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="L. Crude Oil NYM"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:textStyle="normal"
+                            app:layout_constraintTop_toBottomOf="@id/txt_lcony4"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/igico4"/>
+
+                        <TextView
+                            android:id="@+id/txt_lcony4value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888,888.88"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_lcony4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_lcony4"/>
+
+                        <TextView
+                            android:id="@+id/txt_lcony4value2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888.88(88%)"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_sublcony4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_sublcony4"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crd_content5_layer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/crd_content4_layer2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="5dp"
+                    android:backgroundTint="@color/cardview_dark_background">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="5dp">
+
+                        <ImageView
+                            android:id="@+id/igico5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:layout_marginLeft="17dp"
+                            app:srcCompat="@drawable/igico" />
+
+                        <TextView
+                            android:id="@+id/txt_lcony5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="LCONY"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/igico5"/>
+
+                        <TextView
+                            android:id="@+id/txt_sublcony5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:text="L. Crude Oil NYM"
+                            android:textSize="15sp"
+                            android:textColor="@color/white"
+                            android:textStyle="normal"
+                            app:layout_constraintTop_toBottomOf="@id/txt_lcony5"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/igico5"/>
+
+                        <TextView
+                            android:id="@+id/txt_lcony5value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888,888.88"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_lcony5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_lcony5"/>
+
+                        <TextView
+                            android:id="@+id/txt_lcony5value2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:text="888.88(88%)"
+                            android:textSize="17sp"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintTop_toTopOf="@id/txt_sublcony5"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toBottomOf="@id/txt_sublcony5"/>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/txt_footer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:text="Ini sebagai latihan pertama"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/crd_content5_layer2"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
