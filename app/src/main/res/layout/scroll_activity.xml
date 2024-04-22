@@ -22,15 +22,15 @@
                 android:layout_height="match_parent"
                 android:background="@drawable/bg_layer2">
 
-                <ImageView
-                    android:id="@+id/ico_sup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="17dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/txt_logo"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/txt_logo"
-                    app:srcCompat="@drawable/supico" />
+<!--                <ImageView-->
+<!--                    android:id="@+id/ico_sup"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginEnd="17dp"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@+id/txt_logo"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="@+id/txt_logo"-->
+<!--                    app:srcCompat="@drawable/supico" />-->
 
                 <TextView
                     android:id="@+id/txt_logo"
